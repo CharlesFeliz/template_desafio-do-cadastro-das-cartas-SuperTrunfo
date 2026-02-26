@@ -6,13 +6,13 @@
 
 int main() {
 int populacao1,npt1,populacao2,npt2;
-float area1,pib1,area2,pib2, dp1,dp2,pibc1,pibc2;
-char estado1,estado2;
+float area1,pib1,area2,pib2,dp1,dp2,pibc1,pibc2;
+char estado1[10],estado2[10];
 char n_cidade1[50], cod_cidade1[50],n_cidade2[50], cod_cidade2[50];
 
 printf("\n\nCarta 01: \n");
 printf("Digite a letra do estado:");
-scanf("%c", &estado1);
+scanf("%s", &estado1);
 
 printf("Digite o código da cidade:");
 scanf("%s", &cod_cidade1);
@@ -35,7 +35,7 @@ scanf("%d", &npt1);
 printf("\n\nCarta 02: \n");
 
 printf("Digite a letra do estado:");
-scanf("%c", &estado2);
+scanf("%S", &estado2);
 
 printf("Digite o código da cidade:");
 scanf("%s", &cod_cidade2);
@@ -86,19 +86,20 @@ printf("O PIB per Capita é: %.4f milhões de reais\n", pibc2);
 printf("\n\nComparando as Cartas \n");
 
 if (dp1<dp2)
- printf ("A densidade populacional da carta 01 é a vencedora\n");
-else
- printf ("A densidade populacional da carta 02 é a vencedora\n");
+  printf ("A densidade populacional da carta 01 é a vencedora\n");
+  else
+  printf ("A densidade populacional da carta 02 é a vencedora\n");
 
 if (populacao1>populacao2)
   printf ("A população da carta 01 é a vencedora\n");
-else
+ else
   printf ("A população da carta 02 é a vencedora\n");
+
 if (area1>area2)
  printf ("A área da carta 01 é a vencedora\n");
-else
+ else
  printf ("A área da carta 02 é a vencedora\n");
- 
+
 if (pib1>pib2)
 printf ("O PIB da carta 01 é a vencedora\n");
 else
